@@ -16,6 +16,8 @@
         android:theme="@style/Theme.PictureInPictureMode"
         tools:targetApi="31">
         <receiver android:name=".MainActivity$MyReceiver" />
+
+        <!--android:configChanges set the events that WILL NOT recreate the activity-->
         <activity
             android:name=".MainActivity"
             android:exported="true"

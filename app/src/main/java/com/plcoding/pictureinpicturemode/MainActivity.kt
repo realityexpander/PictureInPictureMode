@@ -6,6 +6,7 @@ import android.app.ProgressDialog
 import android.app.RemoteAction
 import android.content.BroadcastReceiver
 import android.content.Context
+import android.content.ContextWrapper
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Rect
@@ -30,6 +31,18 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import com.plcoding.pictureinpicturemode.ui.theme.PictureInPictureModeTheme
+
+// Articles
+// https://en.proft.me/2018/05/30/android-picture-picture-mode/
+// https://medium.com/code-procedure-and-rants/android-picture-in-picture-28f8ca61bcf
+// https://blog.logrocket.com/implementing-picture-in-picture-mode-android/
+// https://developer.android.com/guide/topics/ui/picture-in-picture
+
+// Google sample
+// https://github.com/googlearchive/android-PictureInPicture/blob/master/app/src/main/java/com/example/android/pictureinpicture/MainActivity.java
+
+// Other samples
+// https://www.geeksforgeeks.org/how-to-play-video-from-url-in-android/
 
 class MainActivity : ComponentActivity() {
 
@@ -113,6 +126,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun updatedPipParams(): PictureInPictureParams? {
+
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             PictureInPictureParams.Builder()
                 .setSourceRectHint(videoViewBounds)
@@ -136,7 +150,8 @@ class MainActivity : ComponentActivity() {
                     )
                 )
                 .build()
-        } else null
+        } else
+            null // cant use PIP below API 26 (Oreo)
     }
 
     override fun onUserLeaveHint() {
