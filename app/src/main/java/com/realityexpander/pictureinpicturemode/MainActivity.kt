@@ -1,4 +1,4 @@
-package com.plcoding.pictureinpicturemode
+package com.realityexpander.pictureinpicturemode
 
 import android.app.PendingIntent
 import android.app.PictureInPictureParams
@@ -6,7 +6,6 @@ import android.app.ProgressDialog
 import android.app.RemoteAction
 import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.ContextWrapper
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Rect
@@ -17,20 +16,17 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Rational
 import android.widget.MediaController
-import android.widget.ProgressBar
 import android.widget.VideoView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
-import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toAndroidRect
 import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
-import com.plcoding.pictureinpicturemode.ui.theme.PictureInPictureModeTheme
+import com.realityexpander.pictureinpicturemode.ui.theme.PictureInPictureModeTheme
 
 // Articles
 // https://en.proft.me/2018/05/30/android-picture-picture-mode/

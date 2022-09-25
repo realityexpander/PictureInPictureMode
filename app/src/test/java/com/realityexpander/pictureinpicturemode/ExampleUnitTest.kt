@@ -1,4 +1,4 @@
-package com.plcoding.pictureinpicturemode
+package com.realityexpander.pictureinpicturemode
 
 import org.junit.Test
 

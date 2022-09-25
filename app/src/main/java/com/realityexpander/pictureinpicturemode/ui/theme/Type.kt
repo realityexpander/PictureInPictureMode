@@ -1,4 +1,4 @@
-package com.plcoding.pictureinpicturemode.ui.theme
+package com.realityexpander.pictureinpicturemode.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
