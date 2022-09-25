@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
                 //progressDialog = ProgressDialog(context)
                 val progressDialog = ProgressDialog.show(context, "", "Loading Video…")
 
-                AndroidView(
+                AndroidView( // XML
                     factory = {
                         VideoView(it, null).apply {
                             //setVideoURI(Uri.parse("android.resource://$packageName/${R.raw.sample}"))
@@ -81,7 +81,6 @@ class MainActivity : ComponentActivity() {
 
                             val mediaController = MediaController(context)
 
-                            // sets the anchor view
                             // anchor view for the videoView
                             mediaController.setAnchorView(this)
 
